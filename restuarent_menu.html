@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavorsome Bistro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffecd1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #header-img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    nav {
+      background-color: #ffcc99;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #5a2d0c;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    article {
+      background-color: #fff3e6;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    article img {
+      width: 120px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ffcc99;
+      padding-bottom: 5px;
+      color: #b33f00;
+    }
+
+    form {
+      background-color: #fff3e6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="number"], textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 60px;
+    }
+
+    input[type="submit"] {
+      background-color: #b33f00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #a12e00;
+    }
+
+    footer {
+      background-color: #ffcc99;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img id="header-img" src="https://placekitten.com/150/150" alt="Flavorsome Bistro Logo">
+    <h1>Flavorsome Bistro</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#order-form">Place Your Order</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Menu</h2>
+
+      <article>
+        <img src="https://placekitten.com/200/150" alt="Classic Cheeseburger">
+        <div>
+          <h3>Classic Cheeseburger</h3>
+          <p>Juicy beef patty with cheddar cheese, lettuce, tomato, and our secret sauce. <em>$8.99</em></p>
+        </div>
+      </article>
+
+      <article>
+        <img src="https://placekitten.com/201/150" alt="Margherita Pizza">
+        <div>
+          <h3>Margherita Pizza</h3>
+          <p>Fresh mozzarella, basil, and tomato sauce on a crispy thin crust. <em>$12.50</em></p>
+        </div>
+      </article>
+
+      <article>
+        <img src="https://placekitten.com/202/150" alt="Caesar Salad">
+        <div>
+          <h3>Caesar Salad</h3>
+          <p>Crisp romaine lettuce with parmesan, croutons, and creamy Caesar dressing. <em>$7.25</em></p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form">
+      <h2>Place Your Order</h2>
+      <form>
+
+        <!-- Quantity inputs -->
+        <label for="burger">Classic Cheeseburger:</label>
+        <input type="number" id="burger" name="burger" min="0" value="0">
+
+        <label for="pizza">Margherita Pizza:</label>
+        <input type="number" id="pizza" name="pizza" min="0" value="0">
+
+        <label for="salad">Caesar Salad:</label>
+        <input type="number" id="salad" name="salad" min="0" value="0">
+
+        <!-- Add-ons -->
+        <label>Add-ons:</label>
+        <input type="checkbox" id="extra-cheese" name="addons" value="extra-cheese">
+        <label for="extra-cheese">Extra Cheese</label><br>
+
+        <input type="checkbox" id="bacon" name="addons" value="bacon">
+        <label for="bacon">Bacon</label><br>
+
+        <input type="checkbox" id="avocado" name="addons" value="avocado">
+        <label for="avocado">Avocado</label>
+
+        <!-- Special requests -->
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="requests" maxlength="200" placeholder="Write any special instructions here..."></textarea>
+
+        <!-- Submit button -->
+        <input type="submit" value="Go To Checkout">
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with love by CodédexUser</p>
+  </footer>
+
+</body>
+</html>
